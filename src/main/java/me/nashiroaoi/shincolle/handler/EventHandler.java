@@ -26,7 +26,7 @@ public class EventHandler {
     @SubscribeEvent
     public void onDrop(LivingDropsEvent event){
         Entity host = event.getEntity();
-        LOGGER.log(Level.ALL,host.getType().toString());
+        LOGGER.log(Level.ALL,host.getType().toString());//Todo:inplement
     }
     @SubscribeEvent
     public void onJoin(PlayerEvent.ItemPickupEvent event){
@@ -37,6 +37,6 @@ public class EventHandler {
     @SubscribeEvent
     public void onEggUse(LivingEntityUseItemEvent event){
         ItemStack item = event.getItem();
-        System.out.println(item);
+        LOGGER.info(item);
     }
 }

@@ -1,5 +1,6 @@
 package me.nashiroaoi.shincolle;
 
+import me.nashiroaoi.shincolle.handler.EventHandler;
 import me.nashiroaoi.shincolle.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -49,6 +50,7 @@ public class Shincolle
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
